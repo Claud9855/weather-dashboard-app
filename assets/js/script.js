@@ -14,16 +14,17 @@ async function getData(){
     var data1 = await response1.json();
     var arr = [data1[0].lat, data1[0].lon, data1[0].name];
     setupLocalHistory(arr);
-
-    var resquestURL = "https://api.openweathermap.org/data/2.5/onecall?lat=" + $('#localhistory').children().eq(index).attr('data-latitude') + "&lon=" + $('#localhistory').children().eq(index).attr('data-longitude') + "&exclude=alerts&units=imperial&appid=" + apiKey;
+    // $('#localhistory').children().eq(index).attr('data-latitude')
+    // $('#localhistory').children().eq(index).attr('data-longitude')
+    var resquestURL = "https://api.openweathermap.org/data/2.5/onecall?lat=" + data1[0].lat + "&lon=" + data1[0].lon + "&exclude=alerts&units=imperial&appid=" + apiKey;
     index++;
 
     // var responeses = await Promise.all([fetch(url),fetch(resquestURL)]);
     var response2 = await fetch(resquestURL);
     var data2 = await response2.json();
     console.log(data2);
-    
-    var weatherData = [data2.current.temp, data2.current.wind_speed, data2.current.humidity, data2.current.uvi, $('button').eq(index).attr('data-name'), data2.current.weather[0].icon];
+    // $('button').eq(index).attr('data-name')
+    var weatherData = [data2.current.temp, data2.current.wind_speed, data2.current.humidity, data2.current.uvi, data1[0].name, data2.current.weather[0].icon];
     setupJumbotron(weatherData);
 }
 
