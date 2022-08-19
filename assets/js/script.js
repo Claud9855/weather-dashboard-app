@@ -12,7 +12,7 @@ async function getData(){
         alert("empty input. please enter a city name.");
         return null;
     }
-    var url = "http://api.openweathermap.org/geo/1.0/direct?q="+ searchInput.val() + "&limit=1&appid=" + apiKey;
+    var url = "https://api.openweathermap.org/geo/1.0/direct?q="+ searchInput.val() + "&limit=1&appid=" + apiKey;
     searchInput.val("");
 
     var response1 = await fetch(url);
