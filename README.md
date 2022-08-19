@@ -15,7 +15,8 @@
 
  ## URL
  -------
- copy and paste url: 
+ copy and paste url: https://claud9855.github.io/weather-dashboard-app/
 
  ## Screenshot
  --------------
+ ![image](https://user-images.githubusercontent.com/37052240/185541102-0d1a67c7-bb59-45a9-8fe9-923d50eb7c0e.png)
