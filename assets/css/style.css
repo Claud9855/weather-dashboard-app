@@ -1,0 +1,31 @@
+/* element selectors */
+header {
+    background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(30, 62, 243));
+    box-shadow: 10px 0px 5px black;
+}
+
+header h1 {
+    text-shadow: 2px 2px 2px white;
+}
+
+/* custom bootstrap class */
+.col-sm-8 .jumbotron {
+    box-shadow: 10px 10px 5px black;
+}
+
+/* custom bootstrap class */
+.card {
+    box-shadow: 5px 5px 5px black;
+}
+
+/* id selectors */
+#localhistory button {
+    box-shadow: 5px 5px 3px black;
+}
+
+#search-btn {
+    box-shadow: 3px 3px 3px black;
+}
+
+
+

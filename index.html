@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="./assets/css/style.css" />
 
     <!-- jQuery library -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
@@ -18,23 +19,27 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script> 
 </head>
 <body>
+    <!-- Header section -->
     <header class="jumbotron jumbotron-fluid text-center p-0">
         <div class="container pb-3">
             <h1 class="font-weight-bold">Weather Dashboard</h1>
         </div>
     </header>
 
+    <!-- Main section for search input and weather display -->
     <main class="container-fluid row">
         <div class="col-sm-4">
             <div class="form-group">
                 <h2>Search for a city:</h2>
-                <input type="search" class="form-control" id="search">
+                <input type="search" class="form-control" id="search" placeholder="Enter City Name">
                 <button type="button" id="search-btn" class="btn btn-primary form-control mt-3">Search</button>
             </div>
             <hr/>
+            <!-- structure and store search history in button groups -->
             <div id="localhistory" class="btn-group-vertical container-fluid"></div>
         </div>
         <div class="col-sm-8">
+            <!-- Display current weather data -->
             <div class="jumbotron p-3 bg-white border border-dark">
                 <h2 id="search-input"></h2>
                 <p>Temp: <span id="temp"></span></p>
@@ -43,12 +48,14 @@
                 <p>UV Index: <span id="uv-index"></span></p>
             </div>
 
+            <!-- Display 5 Day Forecast weather data -->
             <h3 class="font-weight-bold">5-Day Forecast:</h3>
             <div id="5-day-forecast" class="row"></div>
 
         </div>
     </main>
 
+    <!-- Moment.js library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="./assets/js/script.js"></script>
 </body>
