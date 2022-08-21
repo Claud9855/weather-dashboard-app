@@ -1,4 +1,5 @@
-var apiKey = "b137ba82c0ac5142d6480bc2e0ad3380";
+// api key
+var apiKey = config.API_KEY;
 // search history object
 var searchHistory = {
     histories: []
