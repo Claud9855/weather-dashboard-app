@@ -5,6 +5,8 @@
 ---------------
 - This site allows users to search for a city name and display current/forecast weather datas
 - The site uses the openweathermap api to gather the weather data and display them to end-users
+- sites saves search history
+- site is responsive
 
 ## Technologies
 ----------------
